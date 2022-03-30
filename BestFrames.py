@@ -2,9 +2,9 @@ import os
 
 def creat_psnr_log(source,encode)->str:
     '''
-    creating psnr log
-    :param source:the source clip file location
-    :param encode:the encode clip file location
+    creating PSNR log
+    :param source:the source clip file address
+    :param encode:the encode clip file address
     :return:content ->str
     example:creat_psnr_log(r"H:\vstest_outputs\crf\crf_16.4.mkv",r"H:\vstest_outputs\crf\crf_16.6.mkv")
     '''
@@ -15,9 +15,9 @@ def creat_psnr_log(source,encode)->str:
 
 def creat_ssim_log(source,encode)->str:
     '''
-    creating ssim log
-    :param source: the source clip file location
-    :param encode: the encode clip file location
+    creating SSIM log
+    :param source: the source clip file address
+    :param encode: the encode clip file address
     :return: content->str
     example:creat_ssim_log(r"H:\vstest_outputs\crf\crf_16.4.mkv",r"H:\vstest_outputs\crf\crf_16.6.mkv")
     '''
@@ -28,9 +28,9 @@ def creat_ssim_log(source,encode)->str:
 
 def psnr_sort(source,encode):
     '''
-    find the best frame and its psnr
-    :param source: the source clip file location
-    :param encode: the encode clip file location
+     Making a list of every frame's PSNR and ordered by descending order.
+    :param source: the source clip file address
+    :param encode: the encode clip file address
     :return:
     example:psnr_sort(r"H:\vstest_outputs\crf\crf_16.4.mkv",r"H:\vstest_outputs\crf\crf_16.6.mkv")
     '''
@@ -60,9 +60,9 @@ def psnr_sort(source,encode):
 
 def ssim_sort(source,encode):
     '''
-    find the best frame and its ssim
-    :param source: the source clip file location
-    :param encode: the encode clip file location
+    Making a list of every frame's SSIM and ordered by descending order.
+    :param source: the source clip file address
+    :param encode: the encode clip file address
     :return:
     example:ssim_sort(r"H:\vstest_outputs\crf\crf_16.4.mkv",r"H:\vstest_outputs\crf\crf_16.6.mkv")
     '''
@@ -86,7 +86,7 @@ def ssim_sort(source,encode):
         flag += 1
         sum_of_ssim += ssim_avg
     del ssim_list[0]
-    # average_ssim_num = sum_of_ssim / len(ssim_turple)  # average ssim
+    # average_ssim_num = sum_of_ssim / len(ssim_turple)  # average SSIM
     ssim_sorted = sorted(ssim_list, key=lambda x: x[1], reverse=True)  # sort
     print(ssim_sorted)
 
