@@ -1,5 +1,7 @@
 # BestFrames
 
+### Just for PTer members testing. Please not fork or publish elsewhere.
+
 ## Requests:
 
 * FFmpeg
